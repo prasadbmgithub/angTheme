@@ -1,0 +1,14 @@
+<div style="width:350px;min-width: height 95%;">
+  <div>
+    <img src="https://www.gstatic.com/webp/gallery/1.jpg" style="width:90px;height:80px;padding:10px;margin:20px" />
+  </div>
+</div>
+
+<div *ngFor="let itm of navItems">
+  <a>{{itm.name}}</a>
+  <ul>
+    <li *ngFor="let nv of itm?.children">
+      <a [routerLink]="nv.routeLink"><span>{{nv.name}}</span></a>
+    </li>
+  </ul>
+</div>
